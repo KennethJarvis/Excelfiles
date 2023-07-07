@@ -27,7 +27,7 @@ Sub PullData()
     
     ' Close the source workbook
     SourceWorkbook.Close SaveChanges:=False
-End Sub
+End Sub 
 
 Save
 
