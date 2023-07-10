@@ -3,11 +3,13 @@
 Pull
 
 Sub PullData()
+
     Dim SourceWorkbook As Workbook
     Dim DestinationWorkbook As Workbook
     Dim SourceWorksheet As Worksheet
     Dim DestinationWorksheet As Worksheet
     Dim LastRow As Long
+    
     ' Open the source workbook
     Set SourceWorkbook = Workbooks.Open("C:\Users\Ken\Downloads\Main.xlsx")
     ' Set the source worksheet
@@ -27,6 +29,7 @@ End Sub
 Save
 
 Sub SaveChanges()
+
     Dim SourceWorkbook As Workbook
     Dim DestinationWorkbook As Workbook
     Dim SourceWorksheet As Worksheet
@@ -53,13 +56,13 @@ Option Explicit
 
 Sub Create_Email()
 
-'Define outlook variables
-Dim OutApp As Object
-Dim OutMail As Object
-'Allocate
-Set OutApp = CreateObject("Outlook.Application")
-Set OutMail = OutApp.CreateItem(0)
-With OutMail
+    'Define outlook variables
+    Dim OutApp As Object
+    Dim OutMail As Object
+    'Allocate
+    Set OutApp = CreateObject("Outlook.Application")
+    Set OutMail = OutApp.CreateItem(0)
+    With OutMail
     .To = "info@excel.com"
     .Subject = "Lets Test"
     .Body = "Test" & vbNewLine & _
